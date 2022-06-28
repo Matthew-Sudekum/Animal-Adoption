@@ -4,9 +4,8 @@
 }
 
 body,html {
-    font-family: 'IBM Plex Mono', monospace;
-    background-color: #CEFFFC;
-    color: #515151;
+    background-color: hsl(176, 100%, 83%);
+    color: hsl(230, 100%, 0%);
     overflow-x: hidden;
     width: 100vw;
     height: 100%;

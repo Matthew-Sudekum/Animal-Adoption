@@ -14,7 +14,7 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  burgerOutInAnim(){
+  burgerOutInAnim() {
     this.navDropped = !this.navDropped;
   }
 }
