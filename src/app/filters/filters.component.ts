@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { filters } from '../model/filters';
 
 @Component({
@@ -11,7 +11,7 @@ export class FiltersComponent implements OnInit {
   constructor() { }
 
   @Output() filterOptions = new EventEmitter<Object>();
-
+  
   menuShown: boolean = false;
   menu:any;
 

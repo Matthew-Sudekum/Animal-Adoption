@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild } from '@angular/core';
 import { ApiServiceService } from '../api-service.service';
+import { FiltersComponent } from '../filters/filters.component';
 import { filters } from '../model/filters';
 
 @Component({
@@ -14,6 +15,9 @@ export class AnimalsComponent implements OnInit {
   page = 1;
 
   filters!: filters;
+
+  @ViewChild(FiltersComponent)
+  filterChild!: FiltersComponent;
 
   constructor(public apiService: ApiServiceService) { }
 
@@ -33,6 +37,9 @@ export class AnimalsComponent implements OnInit {
     this.page = 1;
     this.apiService.getFilterData(this.filters);
     this.apiService.searchAnimals(this.postalcode, this.distance, this.page);
+    if(this.filterChild.menuShown == true){
+      this.filterChild.toggleMenu();
+    }
   }
 
   updateFilters(data: any){

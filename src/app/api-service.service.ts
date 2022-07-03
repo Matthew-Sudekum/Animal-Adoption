@@ -84,9 +84,6 @@ export class ApiServiceService {
   getFilterData(data: filters) {
     this.filterOptions = data;
     this.applyFilters();
-    console.log(this.filters);
-    console.log(this.filterProcess);
-    console.log(this.criteria.gender);
   }
   applyFilters(){
     this.resetFilters();
@@ -179,7 +176,7 @@ export class ApiServiceService {
         "criteria": "true"
       });
       fieldCount++;
-      this.filterProcess += "AND " + fieldCount;
+      this.filterProcess += " AND " + fieldCount;
     }else if(this.filterOptions.goodWith[0] == 0){}
 
     if(this.filterOptions.goodWith[1] == 1){
@@ -189,7 +186,7 @@ export class ApiServiceService {
         "criteria": "true"
       });
       fieldCount++;
-      this.filterProcess += "AND " + fieldCount;
+      this.filterProcess += " AND " + fieldCount;
     }else if(this.filterOptions.goodWith[1] == 0){}
 
     if(this.filterOptions.goodWith[2] == 1){
@@ -199,7 +196,7 @@ export class ApiServiceService {
         "criteria": "true"
       });
       fieldCount++;
-      this.filterProcess += "AND " + fieldCount;
+      this.filterProcess += " AND " + fieldCount;
     }else if(this.filterOptions.goodWith[2] == 0){}
 
     groupCount = 0;

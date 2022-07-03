@@ -14,7 +14,7 @@
         </div>
         <div class="list">
             <app-animal-list-item *ngFor="let item of apiService.items; even as isEven"
-                [class.rightBorder] = "isEven" [item] = "item"></app-animal-list-item>
+                [class.rightBorder]="isEven" [item]="item"></app-animal-list-item>
         </div>
         <div class="pageSelectors" *ngIf="apiService.items.length > 0">
             <p class="chevron" (click)="prevPage()">&#60;</p>

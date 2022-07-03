@@ -10,6 +10,7 @@ import { OrgsComponent } from './orgs/orgs.component';
 import { OrgListItemComponent } from './org-list-item/org-list-item.component';
 import { AnimalListItemComponent } from './animal-list-item/animal-list-item.component';
 import { FiltersComponent } from './filters/filters.component';
+import { AnimalPageComponent } from './animal-page/animal-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FiltersComponent } from './filters/filters.component';
     OrgsComponent,
     OrgListItemComponent,
     AnimalListItemComponent,
-    FiltersComponent
+    FiltersComponent,
+    AnimalPageComponent
   ],
   imports: [
     BrowserModule,
