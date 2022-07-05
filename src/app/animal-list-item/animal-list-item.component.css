@@ -16,3 +16,9 @@
 img {
     max-height: 70%;
 }
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: calc(25vw - 38px);
+    }
+}

@@ -17,9 +17,17 @@ export class AnimalPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.container = document.getElementById("container");
+    this.charReplace();
+    this.constructGoodWithText();
+  }
+
+  charReplace() {
     this.descText = this.animal.attributes.descriptionText.replace(/&nbsp;/g, "");
     this.descText = this.descText.replace(/&#39;/g, "'");
-    this.constructGoodWithText();
+    this.descText = this.descText.replace(/&rsquo;/g, "'");
+    this.descText = this.descText.replace(/&lsquo;/g, "'");
+    this.descText = this.descText.replace(/&rdquo;/g, "");
+    this.descText = this.descText.replace(/&ldquo;/g, "");
   }
 
   toggleDisplay() {

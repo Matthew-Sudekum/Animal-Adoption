@@ -34,7 +34,7 @@ export class ApiServiceService {
   filterOptions!: filters;
 
   async searchOrgs(postalcode: any, distance: any, page:number) {
-    const response = await fetch('https://api.rescuegroups.org/v5/public/orgs/search/?limit=10&page='+page+'&sort=orgs.distance', {
+    const response = await fetch('https://api.rescuegroups.org/v5/public/orgs/search/?limit=12&page='+page+'&sort=orgs.distance', {
       method: 'POST',
       headers: {
         'Content-Type':'application/vnd.api+json',
@@ -57,7 +57,7 @@ export class ApiServiceService {
   }
 
   async searchAnimals(postalcode: any, distance: any, page:number) {
-    const response = await fetch('https://api.rescuegroups.org/v5/public/animals/search/?limit=10&page='+page+'&sort=animals.distance', {
+    const response = await fetch('https://api.rescuegroups.org/v5/public/animals/search/?limit=12&page='+page+'&sort=animals.distance', {
       method: 'POST',
       headers: {
         'Content-Type':'application/vnd.api+json',

@@ -66,7 +66,11 @@ p.button {
     padding-bottom: 3vh;
     display: flex;
     flex-direction: row;
-    /*justify-content: space-between;*/
+}
+@media screen and (min-width: 450px) {
+    .options {
+        justify-content: space-around;
+    }
 }
 .options > ul {
     list-style: none;

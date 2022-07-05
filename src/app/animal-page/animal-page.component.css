@@ -1,8 +1,16 @@
+.background {
+    background-color: hsl(176, 100%, 83%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
 #container {
     position: absolute;
     background-color: hsl(176, 100%, 83%);
     width: 100vw;
-    height: calc(90vh - 4px);
+    min-height: calc(90vh - 4px);
     top: calc(10vh + 4px);
     left: 0;
     display: flex;
@@ -51,4 +59,5 @@ p:nth-child(3){
 
 #desc {
     text-align: left;
+    margin-bottom: 1.5vh;
 }
