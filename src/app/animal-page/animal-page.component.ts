@@ -10,15 +10,47 @@ export class AnimalPageComponent implements OnInit {
   @Input() animal: any;
   container!:any;
   hidden:boolean = true;
+  descText:string = "";
+  goodWithText:string = "";
   
   constructor() { }
 
   ngOnInit(): void {
     this.container = document.getElementById("container");
+    this.descText = this.animal.attributes.descriptionText.replace(/&nbsp;/g, "");
+    this.descText = this.descText.replace(/&#39;/g, "'");
+    this.constructGoodWithText();
   }
 
   toggleDisplay() {
     this.hidden = !this.hidden;
+  }
+
+  constructGoodWithText(){
+    let counter:number = 0;
+    let holderString:string = "";
+    if(this.animal.attributes.isDogsOk == true) {
+      holderString += "dogs";
+      counter++;
+    }
+    if(this.animal.attributes.isCatsOk == true) {
+      if(counter > 0){
+        holderString += " and "
+      }
+      holderString += "cats";
+      counter++;
+    }
+    if(this.animal.attributes.isKidsOk == true) {
+      if(counter > 0){
+        holderString += " and "
+      }
+      holderString += "kids";
+      counter++;
+    }
+    if(counter > 0){
+      holderString += "."
+      this.goodWithText = "Is known to be good with " + holderString;
+    }
   }
 
 }

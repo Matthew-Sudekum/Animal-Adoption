@@ -34,6 +34,21 @@
     transform: rotateZ(-45deg);
 }
 
-img {
+.content {
+    width: 65vw;
     margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    margin-top: 2.5vh;
+}
+p:nth-child(3){
+    margin-top: 0.5vh;
+}
+
+#desc {
+    text-align: left;
 }
